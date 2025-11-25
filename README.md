@@ -551,6 +551,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [🔝 Back to Top](#-personal-knowledge-copilot)
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [Abhiram Rangoon](https://github.com/abhiram-1729)
 
 </div>
