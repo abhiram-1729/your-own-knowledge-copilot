@@ -10,4 +10,7 @@ services:
         sync: false
       - key: PYTHON_VERSION
         value: 3.11.8
-    runtime: python3
+      - key: PYTHON
+        value: python3.11
+    runtime: python
+    pythonVersion: 3.11.8

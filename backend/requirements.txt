@@ -22,3 +22,4 @@ torch
 transformers
 scikit-learn
 scipy
+typing-extensions<5.0.0
