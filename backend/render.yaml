@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: knowledge-copilot-api
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11.8
+    runtime: python3
