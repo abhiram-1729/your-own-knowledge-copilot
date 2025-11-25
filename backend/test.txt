@@ -1,0 +1,1 @@
+This is a test document about artificial intelligence. AI is a branch of computer science that aims to create intelligent machines that can simulate human behavior. Machine learning is a subset of AI that enables systems to learn from data.
