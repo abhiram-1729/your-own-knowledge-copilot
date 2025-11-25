@@ -1,16 +1,10 @@
 services:
   - type: web
     name: knowledge-copilot-api
-    env: python
+    env: docker
     plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python main.py"
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     envVars:
       - key: GEMINI_API_KEY
         sync: false
-      - key: PYTHON_VERSION
-        value: 3.11.8
-      - key: PYTHON
-        value: python3.11
-    runtime: python
-    pythonVersion: 3.11.8
