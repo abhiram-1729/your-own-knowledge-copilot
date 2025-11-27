@@ -20,6 +20,8 @@
 
 Personal Knowledge Copilot is a sophisticated full-stack application that allows you to upload documents (PDF, DOCX, TXT, MD, EML, HTML) and interact with them through an intelligent AI chat interface. Built with modern technologies and featuring a beautiful, responsive UI, it provides instant answers based strictly on your uploaded content.
 
+![Project Screenshot](images/project.png)
+
 ### 🎯 Key Features
 
 - 📄 **Multi-format Document Support** - PDF, DOCX, TXT, Markdown, EML, HTML
