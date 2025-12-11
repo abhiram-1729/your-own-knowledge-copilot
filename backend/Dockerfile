@@ -37,5 +37,5 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/')" || exit 1
 
 # Run the application with production settings
-# Use 1 worker by default (adjust based on your server capacity)
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# PORT is set by Render automatically, defaults to 8000
+CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}

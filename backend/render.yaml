@@ -4,7 +4,13 @@ services:
     env: docker
     plan: free
     dockerfilePath: ./Dockerfile
-    dockerContext: .
+    dockerContext: ./backend
     envVars:
       - key: GEMINI_API_KEY
         sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: DATABASE_URL
+        value: sqlite:///./knowledge_copilot.db
+      - key: CHROMA_PERSIST_DIRECTORY
+        value: ./chroma_db
