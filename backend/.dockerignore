@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Database (will be mounted as volume)
+*.db
+*.sqlite
+*.sqlite3
+
+# ChromaDB (will be mounted as volume)
+chroma_db/
+
+# Environment (should be set in deployment platform)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Temporary files
+temp_*
+*.tmp
+*.pdf
+*.docx
+# Exclude .txt files but keep requirements.txt
+*.txt
+!requirements.txt
+
+# Documentation
+*.md
+README.md
+

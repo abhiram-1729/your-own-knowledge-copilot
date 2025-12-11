@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import axios from 'axios'
+import apiClient from '../config/api'
 import { motion, AnimatePresence } from 'framer-motion'
 import toast, { Toaster } from 'react-hot-toast'
 import { 
@@ -41,7 +41,7 @@ const Dashboard = () => {
 
   const fetchDocuments = async () => {
     try {
-      const response = await axios.get('/api/documents')
+      const response = await apiClient.get('/documents')
       setDocuments(response.data)
     } catch (error) {
       toast.error('Failed to fetch documents')
@@ -56,7 +56,7 @@ const Dashboard = () => {
     formData.append('file', file)
 
     try {
-      await axios.post('/api/upload', formData, {
+      await apiClient.post('/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -107,7 +107,7 @@ const Dashboard = () => {
     setLoading(true)
 
     try {
-      const response = await axios.post('/api/query', { question: input })
+      const response = await apiClient.post('/query', { question: input })
       const assistantMessage = { 
         role: 'assistant', 
         content: response.data.answer,
@@ -129,7 +129,7 @@ const Dashboard = () => {
 
   const handleDelete = async (documentId) => {
     try {
-      await axios.delete(`/api/documents/${documentId}`)
+      await apiClient.delete(`/documents/${documentId}`)
       fetchDocuments()
       toast.success('Document deleted successfully!')
     } catch (error) {
